@@ -49,6 +49,11 @@ const userSchema = new mongoose.Schema({
             type:String,
         }
     }],
+//     otp:String,
+//     verified:{
+//         type:String,
+//         default:false
+//     }
     profile:String
     
 });
