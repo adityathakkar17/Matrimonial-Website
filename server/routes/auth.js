@@ -15,8 +15,15 @@ const storage = multer.diskStorage({
 })
 
 const upload = multer({ storage: storage });
-
-
+// route to verify a user
+// router.post('/verify',async (req,res)=>{ 
+//     const {otp,email}=req.body;
+//     const user=USer.findOne(email)
+//     if(user.otp==otp)
+//         user.verified=true;
+//     await user.save()
+    
+// })
 router.get('/login', (req, res) => {
     res.send("Login page");
 });
