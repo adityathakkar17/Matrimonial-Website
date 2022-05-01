@@ -40,6 +40,7 @@ router.post('/register', upload.single('profile'), async (req, res) => {
             const user = new User({ name, age, dob: modified_dob, gender, phone, email, password, profile, marital_status, mother_tongue, religion, city, pincode });
             const userRegistration = await user.save();
             if (userRegistration) {
+                //send a email to user using nodemailer for sending otp. Store Otp in user schema and mark verified as false
                 res.status(201).send({ message: "User registered successfully." })
             }
             else {
